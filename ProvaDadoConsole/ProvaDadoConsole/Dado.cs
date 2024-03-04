@@ -8,19 +8,18 @@ namespace ProvaDadoConsole
 {
     internal class Dado
     {
-        int faccie, numero;
         Random rnd;
-        public Dado(int _faccie)
+        public Dado()
         {
             rnd = new Random();
-            faccie = _faccie;
-            numero = rnd.Next(1, 7);
         }
-        public int Faccie { get => faccie; set => faccie = value; }
-        public int Numero { get => numero; set => numero = value; }
+        public int LancioDado()
+        {
+            return rnd.Next(1, 7);
+        }
         public string ScriviDado()
         {
-            return ($"Numero faccie: {Faccie}, numero: {Numero}");
+            return ($"numero: {LancioDado()}");
         }
     }
 }
