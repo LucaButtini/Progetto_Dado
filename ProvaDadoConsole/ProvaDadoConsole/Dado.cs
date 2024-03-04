@@ -17,7 +17,7 @@ namespace ProvaDadoConsole
         {
             return rnd.Next(1, 7);
         }
-        public string ScriviDado()
+        public string ScriviDado() //metodo di prova
         {
             return ($"numero: {LancioDado()}");
         }

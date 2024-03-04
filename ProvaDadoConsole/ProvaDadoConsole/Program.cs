@@ -11,7 +11,7 @@ namespace ProvaDadoConsole
         static void Main(string[] args)
         {
             Dado dado = new Dado();
-            Gara gara = new Gara(new Giocatore("lucio"), new Giocatore("lucy"), new Dado());
+            Gara gara = new Gara(new Giocatore("lucio"), new Giocatore("lucy"), new Dado(), 3);
            
             Console.ReadLine();
         }

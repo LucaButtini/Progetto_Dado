@@ -11,7 +11,6 @@ namespace ProvaDadoConsole
     {
         string _nome;
         int _nVittorie;
-
         public Giocatore(string nome)
         {
             _nome = nome;
