@@ -1,0 +1,7 @@
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\bin\Debug\ProvaDadoConsole.exe.config
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\bin\Debug\ProvaDadoConsole.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\bin\Debug\ProvaDadoConsole.pdb
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.csproj.AssemblyReference.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.csproj.CoreCompileInputs.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.pdb
