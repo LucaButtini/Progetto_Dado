@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,68 +10,81 @@ namespace ProvaDadoConsole
     internal class Gara
     {
         Giocatore _g1, _g2;
-        Dado _d;
-        int numeroG1, numeroG2, numeroRound, _roundMax;
-        bool _fineGara;
+        Dado _d1, _d2;
+        int numeroRound, _roundMax;
+        bool _fineGara, _pari;
         string _winner;
-        public Gara(Giocatore g1, Giocatore g2, Dado d, int roundMax)
+        public Gara(Giocatore g1, Giocatore g2, Dado d1, Dado d2, int roundMax)
         {
             _g1 = g1;
             _g2 = g2;
-            _d = d;
-            NumeroG1 = 0;
-            NumeroG2 = 0;
+            _d1 = d1;
+            _d2 = d2;
             numeroRound = 0;
             RoundMax = roundMax;
             FineGara = false;
+            Pari = false;
         }
-        //queste sono proprietà (come facciamo rondo?)
-        //--------------------------------------------------------
-        public bool FineGara { get => _fineGara; set => _fineGara = value; }
-        public string Winner { get => _winner; set => _winner = value; }
-        //-------------------------------------------------------
-
-        public int NumeroG1 { get => numeroG1; private set => numeroG1 = value; }
-        public int NumeroG2 { get => numeroG2; private set => numeroG2 = value; }
+        public bool FineGara { get => _fineGara; private set => _fineGara = value; }
         public int NumeroRound { get => numeroRound; private set => numeroRound = value; }
         public int RoundMax { get => _roundMax; private set => _roundMax = value; }
-        public void Round()//esegue un round della partita
+        public bool Pari { get => _pari; private set => _pari = value; }
+        public string Winner { get => _winner; private set => _winner = value; }
+        public void Round()
         {
-            NumeroG1 = _d.LancioDado();
-            NumeroG2 = _d.LancioDado();
-            Console.WriteLine(NumeroG1);
-            Console.WriteLine(NumeroG2);
-            if (NumeroG1 > NumeroG2)
+            for (int i = 0; i < RoundMax; i++)
             {
-                _g1.NVittorie++;
-            }
-            else if (NumeroG2 > NumeroG1)
-            {
-                _g2.NVittorie++;
-            }
-            else //facciamo che se è pareggio aumentiamo tutte e due le vittorie?
-            {
-                _g1.NVittorie++;
-                _g2.NVittorie++;
-            }
-            NumeroRound++;
-            if (NumeroRound == RoundMax)
-            {
-                ResetGame();
-                FineGara = true;
-            }
+                if (_d1 > _d2)
+                {
+                    _g1.NVittorie++;
+                }
+                else if (_d1 < _d2)
+                {
+                    _g2.NVittorie++;
+                }
+                else // In caso di pareggio
+                {
+                    _g1.NVittorie++;
+                    _g2.NVittorie++;
+                }
+                Console.WriteLine(_d1.FacciaDado);
+                Console.WriteLine(_d2.FacciaDado);
 
+                // Chiamiamo GameWin solo se abbiamo finito tutti i round
+                if (i == RoundMax - 1)
+                {
+                    FineGara = true;
+                    GameWin();
+                }
+            }
         }
-        private void GameWin()// se la partita è finita determina il vincitore o la condizione di parità
+
+
+        private void GameWin()
         {
             if (FineGara)
             {
-                //utilizzare la proprietà winner in qualche modo
+                if (_g1.NVittorie > _g2.NVittorie)
+                {
+                    Winner = $"Vincitore: {_g1.Nome}, Stato Partita: Terminata";
+                }
+                else if (_g1.NVittorie < _g2.NVittorie)
+                {
+                    Winner = $"Vincitore: {_g2.Nome}, Stato Partita: Terminata";
+                }
+                else
+                {
+                    Winner = "Non ci sono vincitori";
+                }
             }
-
+            else
+            {
+                Winner = "Partita ancora in corso";
+            }
         }
+
         public void ResetGame()// resetta la partita
-        {
+        {//da vedere in visuale 
             _g1.NVittorie = 0;
             _g2.NVittorie = 0;
             numeroRound = 0;

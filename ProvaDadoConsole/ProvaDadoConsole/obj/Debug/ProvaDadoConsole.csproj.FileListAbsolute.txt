@@ -5,3 +5,10 @@ C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debu
 C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.csproj.CoreCompileInputs.cache
 C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.exe
 C:\Users\Emilio\Desktop\Progetto_Dado\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.pdb
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\bin\Debug\ProvaDadoConsole.exe.config
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\bin\Debug\ProvaDadoConsole.exe
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\bin\Debug\ProvaDadoConsole.pdb
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.csproj.AssemblyReference.cache
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.csproj.CoreCompileInputs.cache
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.exe
+F:\4E\Luca Buttini\ProvaDadoConsole\ProvaDadoConsole\obj\Debug\ProvaDadoConsole.pdb

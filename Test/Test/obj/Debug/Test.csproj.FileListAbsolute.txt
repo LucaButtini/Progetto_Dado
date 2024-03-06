@@ -1,0 +1,7 @@
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\bin\Debug\Test.exe.config
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\bin\Debug\Test.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\bin\Debug\Test.pdb
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\obj\Debug\Test.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\Test\Test\obj\Debug\Test.pdb

@@ -10,9 +10,9 @@ namespace ProvaDadoConsole
     {
         static void Main(string[] args)
         {
-            Dado dado = new Dado();
-            Gara gara = new Gara(new Giocatore("lucio"), new Giocatore("lucy"), new Dado(), 3);
-           
+            Gara gara = new Gara(new Giocatore("g1"), new Giocatore("g2"), new Dado(6), new Dado(6), 3);
+            gara.Round();
+            Console.WriteLine(gara.Winner);
             Console.ReadLine();
         }
     }
