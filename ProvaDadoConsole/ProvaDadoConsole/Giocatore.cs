@@ -15,7 +15,7 @@ namespace ProvaDadoConsole
         {
             _nome = nome;
             _nVittorie = 0;
-            
+
         }
         public string Nome { get => _nome; set => _nome = value; }
 
