@@ -1,0 +1,10 @@
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe.config
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\bin\Debug\GiocoDado.pdb
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.AssemblyReference.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Form1.resources
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Properties.Resources.resources
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.GenerateResource.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.CoreCompileInputs.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.pdb
