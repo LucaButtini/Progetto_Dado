@@ -11,53 +11,52 @@ namespace ProvaDadoConsole
     {
         Random rnd = new Random(DateTime.Now.Millisecond);
         Giocatore _g1, _g2;
-        Dado _d1, _d2;
-        int numeroRound, _roundMax, _nFaccie;
+        int numeroRound, _roundMax, _faccieEstrazioneDado;
         bool _fineGara, _pari;
         string _winner;
-        public Gara(Giocatore g1, Giocatore g2, Dado d1, Dado d2, int roundMax, int nFaccie)
+        public Gara(Giocatore g1, Giocatore g2, int roundMax, int faccieEstrazioneDado)
         {
             _g1 = g1;
             _g2 = g2;
-            _d1 = d1;
-            _d2 = d2;
             numeroRound = 0;
             RoundMax = roundMax;
-            _nFaccie = nFaccie;
             FineGara = false;
             Pari = false;
+            FaccieEstrazioneDado = faccieEstrazioneDado;
         }
         public bool FineGara { get => _fineGara; private set => _fineGara = value; }
         public int NumeroRound { get => numeroRound; private set => numeroRound = value; }
         public int RoundMax { get => _roundMax; private set => _roundMax = value; }
         public bool Pari { get => _pari; private set => _pari = value; }
         public string Winner { get => _winner; private set => _winner = value; }
+        public int FaccieEstrazioneDado { get => _faccieEstrazioneDado; set => _faccieEstrazioneDado = value; }
         public int Roll()
         {
-            return rnd.Next(1, _nFaccie + 1);
+            return rnd.Next(1, FaccieEstrazioneDado + 1);
         }
         public void Round()
         {
             for (int i = 0; i < RoundMax; i++)
             {
-                _d1.FacciaDado = Roll();
-                _d2.FacciaDado = Roll();
-                if (_d1 > _d2)
+                _g1.Dado.FacciaDado = Roll();
+                _g2.Dado.FacciaDado = Roll();
+
+                if (_g1.Dado > _g2.Dado)
                 {
                     _g1.NVittorie++;
                 }
-                else if (_d1 < _d2)
+                else if (_g1.Dado < _g2.Dado)
                 {
                     _g2.NVittorie++;
                 }
-                else 
+                else
                 {
                     _g1.NVittorie++;
                     _g2.NVittorie++;
                 }
                 Console.WriteLine("Numeri estratti");
-                Console.WriteLine(_d1.FacciaDado);
-                Console.WriteLine(_d2.FacciaDado);
+                Console.WriteLine(_g1.Dado.FacciaDado);
+                Console.WriteLine(_g2.Dado.FacciaDado);
                 Console.WriteLine("Vittorie");
                 Console.WriteLine(_g1.NVittorie);
                 Console.WriteLine(_g2.NVittorie);
@@ -70,7 +69,6 @@ namespace ProvaDadoConsole
                 }
             }
         }
-
         private void GameWin()
         {
             if (FineGara)
@@ -93,7 +91,6 @@ namespace ProvaDadoConsole
                 Winner = "Partita ancora in corso";
             }
         }
-
         public void ResetGame()
         {
             _g1.NVittorie = 0;

@@ -16,7 +16,6 @@ namespace ProvaDadoConsole
         {
             _facciaDado = 0;
         }
-
         static public bool operator >(Dado dado1, Dado dado2)
         {
             return (dado1.FacciaDado > dado2.FacciaDado);
