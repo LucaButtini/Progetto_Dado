@@ -54,13 +54,6 @@ namespace ProvaDadoConsole
                     _g1.NVittorie++;
                     _g2.NVittorie++;
                 }
-                Console.WriteLine("Numeri estratti");
-                Console.WriteLine(_g1.Dado.FacciaDado);
-                Console.WriteLine(_g2.Dado.FacciaDado);
-                Console.WriteLine("Vittorie");
-                Console.WriteLine(_g1.NVittorie);
-                Console.WriteLine(_g2.NVittorie);
-                Console.WriteLine();
 
                 if (i == RoundMax - 1)
                 {
