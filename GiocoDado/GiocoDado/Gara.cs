@@ -25,7 +25,7 @@ namespace GiocoDado
         }
         public bool FineGara { get => _fineGara; private set => _fineGara = value; }
         public int NumeroRound { get => numeroRound; private set => numeroRound = value; }
-        public int RoundMax { get => _roundMax; private set => _roundMax = value; }
+        public int RoundMax { get => _roundMax; set => _roundMax = value; }
         public bool Pari { get => _pari; private set => _pari = value; }
         public string Winner { get => _winner; private set => _winner = value; }
         public int FaccieEstrazioneDado { get => _faccieEstrazioneDado; set => _faccieEstrazioneDado = value; }
@@ -35,30 +35,29 @@ namespace GiocoDado
         }
         public void Round()
         {
-            for (int i = 0; i < RoundMax; i++)
+
+            _g1.Dado.FacciaDado = Roll();
+            _g2.Dado.FacciaDado = Roll();
+
+            if (_g1.Dado > _g2.Dado)
             {
-                _g1.Dado.FacciaDado = Roll();
-                _g2.Dado.FacciaDado = Roll();
-
-                if (_g1.Dado > _g2.Dado)
-                {
-                    _g1.NVittorie++;
-                }
-                else if (_g1.Dado < _g2.Dado)
-                {
-                    _g2.NVittorie++;
-                }
-                else
-                {
-                    _g1.NVittorie++;
-                    _g2.NVittorie++;
-                }
-
-                if (i == RoundMax - 1)
-                {
-                    FineGara = true;
-                    GameWin();
-                }
+                _g1.NVittorie++;
+            }
+            else if (_g1.Dado < _g2.Dado)
+            {
+                _g2.NVittorie++;
+            }
+            else
+            {
+                _g1.NVittorie++;
+                _g2.NVittorie++;
+            }
+            NumeroRound++;
+            //if (NumeroRound == RoundMax - 1)
+            if (NumeroRound == RoundMax)
+            {
+                FineGara = true;
+                GameWin();
             }
         }
         private void GameWin()
