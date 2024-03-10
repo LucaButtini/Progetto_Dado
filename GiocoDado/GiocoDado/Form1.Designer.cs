@@ -50,6 +50,10 @@
             this.rollbtn = new System.Windows.Forms.Button();
             this.dice1img = new System.Windows.Forms.PictureBox();
             this.dice2img = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice1img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice2img)).BeginInit();
@@ -251,7 +255,8 @@
             // 
             this.dice1img.Location = new System.Drawing.Point(208, 272);
             this.dice1img.Name = "dice1img";
-            this.dice1img.Size = new System.Drawing.Size(100, 50);
+            this.dice1img.Size = new System.Drawing.Size(109, 83);
+            this.dice1img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dice1img.TabIndex = 26;
             this.dice1img.TabStop = false;
             this.dice1img.Visible = false;
@@ -261,10 +266,51 @@
             // 
             this.dice2img.Location = new System.Drawing.Point(612, 272);
             this.dice2img.Name = "dice2img";
-            this.dice2img.Size = new System.Drawing.Size(100, 50);
+            this.dice2img.Size = new System.Drawing.Size(107, 83);
+            this.dice2img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dice2img.TabIndex = 27;
             this.dice2img.TabStop = false;
             this.dice2img.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(227, 414);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "label9";
+            this.label9.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(234, 451);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "label10";
+            this.label10.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(227, 483);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "label11";
+            this.label11.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(233, 535);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "label12";
+            this.label12.Visible = false;
             // 
             // Form1
             // 
@@ -273,6 +319,10 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1007, 578);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dice2img);
             this.Controls.Add(this.dice1img);
             this.Controls.Add(this.rollbtn);
@@ -330,6 +380,10 @@
         private System.Windows.Forms.Button rollbtn;
         private System.Windows.Forms.PictureBox dice1img;
         private System.Windows.Forms.PictureBox dice2img;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 

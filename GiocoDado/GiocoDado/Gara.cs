@@ -53,12 +53,13 @@ namespace GiocoDado
                 _g2.NVittorie++;
             }
             NumeroRound++;
-            //if (NumeroRound == RoundMax - 1)
+            
             if (NumeroRound == RoundMax)
             {
                 FineGara = true;
-                GameWin();
+                
             }
+            GameWin();
         }
         private void GameWin()
         {
@@ -88,5 +89,5 @@ namespace GiocoDado
             _g2.NVittorie = 0;
             numeroRound = 0;
         }
-   }
+    }
 }

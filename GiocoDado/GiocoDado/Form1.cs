@@ -118,13 +118,15 @@ namespace GiocoDado
             textBox1.Clear();
         }
 
-        private void rollbtn_Click(object sender, EventArgs e)
+        private async void rollbtn_Click(object sender, EventArgs e)
         {
             Random random = new Random();
+
             for (int i = 0; i < 3; i++)
             {
+                int randomNumber = random.Next(1, 7);
 
-                switch (random.Next(1, 7))
+                switch (randomNumber)
                 {
                     case 1:
                         dice1img.Image = Image.FromFile(path + "\\1.jpg");
@@ -151,10 +153,14 @@ namespace GiocoDado
                         dice2img.Image = Image.FromFile(path + "\\6.jpg");
                         break;
                 }
-                System.Threading.Thread.Sleep(1000);
+                await Task.Delay(1000); // Ritardo di 1 secondo
             }
+            PlayGame();
         }
+        private void DiceFace(int val)
+        {
 
+        }
         private void dice1img_Click(object sender, EventArgs e)
         {
 
@@ -178,7 +184,6 @@ namespace GiocoDado
                 try
                 {
                     gara = new Gara(g1, g2, nRound, faccieDado);
-                    MessageBox.Show("Gara creata con successo!", "Conferma", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception)
                 {
@@ -201,9 +206,34 @@ namespace GiocoDado
             label6.Visible = true;
             label7.Visible = true;
             label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
+            label11.Visible = true;
+            label12.Visible = true;
             dice1img.Visible = true;
             dice2img.Visible = true;
             rollbtn.Visible = true;
+        }
+        private void PlayGame()
+        {
+
+            if (gara.FineGara)
+            {
+                MessageBox.Show("gara finita", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                gara.Round();
+                UpdateInterfaccia();
+            }
+        }
+
+        private void UpdateInterfaccia()
+        {
+            label9.Text = $"{g1.Nome}: {g1.NVittorie} vittorie";
+            label10.Text = $"{g2.Nome}: {g2.NVittorie} vittorie";
+            label11.Text = $"Round: {gara.NumeroRound}/{gara.RoundMax}";
+            label12.Text = gara.Winner;
         }
     }
 }
