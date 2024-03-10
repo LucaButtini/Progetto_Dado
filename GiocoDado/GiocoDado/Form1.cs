@@ -15,6 +15,7 @@ namespace GiocoDado
         Gara gara;
         Giocatore g1, g2;
         int faccieDado = 6, nRound = 0;
+        string nome1, nome2;
         public Form1()
         {
             InitializeComponent();
@@ -50,26 +51,29 @@ namespace GiocoDado
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = textBox2.Text;
-            if (!CheckInserimento(nome))
+            nome1 = textBox2.Text;
+            if (!CheckInserimento(nome1))
             {
                 MessageBox.Show("Inserimento dati non valido o nullo", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
+
             }
-            g1 = new Giocatore(nome, new Dado());
+            label7.Text = nome1;
+            g1 = new Giocatore(nome1, new Dado());
             nomi.Items.Add(g1.ToString());
             textBox2.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string nome = textBox3.Text;
-            if (!CheckInserimento(nome))
+            nome2 = textBox3.Text;
+            if (!CheckInserimento(nome2))
             {
                 MessageBox.Show("Inserimento dati non valido o nullo", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            g2 = new Giocatore(nome, new Dado());
+            label8.Text = nome2;
+            g2 = new Giocatore(nome2, new Dado());
             nomi.Items.Add(g2.ToString());
             textBox3.Clear();
         }
@@ -145,29 +149,16 @@ namespace GiocoDado
                 MessageBox.Show("La gara è già stata creata.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
-            pictureBox1.Visible = true;
-            label4.Visible = true;
+            AttivaCampoGioco();
         }
 
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        gara = new Gara(g1, g2, nRound, faccieDado);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        gara = null;
-        //        MessageBox.Show("Inserimento dati non valido o nullo", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //    }
-        //    if(gara != null )
-        //    {
-        //        MessageBox.Show("Gara creata con successo!", "Conferma", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    pictureBox1.Visible = true;
-        //    label4.Visible = true;
-        //}
+        private void AttivaCampoGioco()
+        {
+            pictureBox1.Visible = true;
+            label4.Visible = true;
+            label6.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+        }
     }
 }

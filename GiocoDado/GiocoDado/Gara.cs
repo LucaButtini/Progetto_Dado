@@ -88,5 +88,5 @@ namespace GiocoDado
             _g2.NVittorie = 0;
             numeroRound = 0;
         }
-    }
+   }
 }
