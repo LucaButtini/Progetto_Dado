@@ -16,6 +16,7 @@ namespace GiocoDado
         Giocatore g1, g2;
         int faccieDado = 6, nRound = 0;
         string nome1, nome2;
+        string path = Environment.CurrentDirectory + "\\images_bin";
         public Form1()
         {
             InitializeComponent();
@@ -117,6 +118,47 @@ namespace GiocoDado
             textBox1.Clear();
         }
 
+        private void rollbtn_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            for (int i = 0; i < 3; i++)
+            {
+
+                switch (random.Next(1, 7))
+                {
+                    case 1:
+                        dice1img.Image = Image.FromFile(path + "\\1.jpg");
+                        dice2img.Image = Image.FromFile(path + "\\1.jpg");
+                        break;
+                    case 2:
+                        dice1img.Image = Image.FromFile(path + "\\2.jpg");
+                        dice2img.Image = Image.FromFile(path + "\\2.jpg");
+                        break;
+                    case 3:
+                        dice1img.Image = Image.FromFile(path + "\\3.jpg");
+                        dice2img.Image = Image.FromFile(path + "\\3.jpg");
+                        break;
+                    case 4:
+                        dice1img.Image = Image.FromFile(path + "\\4.jpg");
+                        dice2img.Image = Image.FromFile(path + "\\4.jpg");
+                        break;
+                    case 5:
+                        dice1img.Image = Image.FromFile(path + "\\5.jpg");
+                        dice2img.Image = Image.FromFile(path + "\\5.jpg");
+                        break;
+                    case 6:
+                        dice1img.Image = Image.FromFile(path + "\\6.jpg");
+                        dice2img.Image = Image.FromFile(path + "\\6.jpg");
+                        break;
+                }
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
+
+        private void dice1img_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -159,6 +201,9 @@ namespace GiocoDado
             label6.Visible = true;
             label7.Visible = true;
             label8.Visible = true;
+            dice1img.Visible = true;
+            dice2img.Visible = true;
+            rollbtn.Visible = true;
         }
     }
 }

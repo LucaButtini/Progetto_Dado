@@ -47,8 +47,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.rollbtn = new System.Windows.Forms.Button();
+            this.dice1img = new System.Windows.Forms.PictureBox();
+            this.dice2img = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice1img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice2img)).BeginInit();
             this.SuspendLayout();
             // 
             // btnclose
@@ -229,18 +233,38 @@
             this.label8.Text = "label8";
             this.label8.Visible = false;
             // 
-            // button5
+            // rollbtn
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Image = global::GiocoDado.Properties.Resources.nero;
-            this.button5.Location = new System.Drawing.Point(445, 243);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 38);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "ROLL";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
+            this.rollbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rollbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rollbtn.Image = global::GiocoDado.Properties.Resources.nero;
+            this.rollbtn.Location = new System.Drawing.Point(433, 236);
+            this.rollbtn.Name = "rollbtn";
+            this.rollbtn.Size = new System.Drawing.Size(112, 61);
+            this.rollbtn.TabIndex = 25;
+            this.rollbtn.Text = "ROLL";
+            this.rollbtn.UseVisualStyleBackColor = true;
+            this.rollbtn.Visible = false;
+            this.rollbtn.Click += new System.EventHandler(this.rollbtn_Click);
+            // 
+            // dice1img
+            // 
+            this.dice1img.Location = new System.Drawing.Point(208, 272);
+            this.dice1img.Name = "dice1img";
+            this.dice1img.Size = new System.Drawing.Size(100, 50);
+            this.dice1img.TabIndex = 26;
+            this.dice1img.TabStop = false;
+            this.dice1img.Visible = false;
+            this.dice1img.Click += new System.EventHandler(this.dice1img_Click);
+            // 
+            // dice2img
+            // 
+            this.dice2img.Location = new System.Drawing.Point(612, 272);
+            this.dice2img.Name = "dice2img";
+            this.dice2img.Size = new System.Drawing.Size(100, 50);
+            this.dice2img.TabIndex = 27;
+            this.dice2img.TabStop = false;
+            this.dice2img.Visible = false;
             // 
             // Form1
             // 
@@ -249,7 +273,9 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1007, 578);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.dice2img);
+            this.Controls.Add(this.dice1img);
+            this.Controls.Add(this.rollbtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -274,6 +300,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice1img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice2img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +327,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button rollbtn;
+        private System.Windows.Forms.PictureBox dice1img;
+        private System.Windows.Forms.PictureBox dice2img;
     }
 }
 
