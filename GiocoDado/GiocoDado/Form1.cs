@@ -14,7 +14,7 @@ namespace GiocoDado
     {
         Gara gara;
         Giocatore g1, g2;
-        int faccieDado = 6, nRound = 0;
+        int faccieDado = 6, nRound = 0, val1, val2;
         string nome1, nome2;
         string path = Environment.CurrentDirectory + "\\images_bin";
         public Form1()
@@ -122,7 +122,7 @@ namespace GiocoDado
         {
             Random random = new Random();
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++) //sono i giri che fa per l'animazione prima dell'estrazione della faccia
             {
                 int randomNumber = random.Next(1, 7);
 
@@ -157,9 +157,53 @@ namespace GiocoDado
             }
             PlayGame();
         }
-        private void DiceFace(int val)
+        private void DiceFace1(int val)
         {
-
+            switch (val)
+            {
+                case 1:
+                    dice1img.Image = Image.FromFile(path + "\\1.jpg");
+                    break;
+                case 2:
+                    dice1img.Image = Image.FromFile(path + "\\2.jpg");
+                    break;
+                case 3:
+                    dice1img.Image = Image.FromFile(path + "\\3.jpg");
+                    break;
+                case 4:
+                    dice1img.Image = Image.FromFile(path + "\\4.jpg");
+                    break;
+                case 5:
+                    dice1img.Image = Image.FromFile(path + "\\5.jpg");
+                    break;
+                case 6:
+                    dice1img.Image = Image.FromFile(path + "\\6.jpg");
+                    break;
+            }
+        }
+        private void DiceFace2(int val)
+        {
+            switch (val)
+            {
+                case 1:
+                    dice2img.Image = Image.FromFile(path + "\\1.jpg");
+                    break;
+                case 2:
+                    dice2img.Image = Image.FromFile(path + "\\2.jpg");
+                    break;
+                case 3:
+                    dice2img.Image = Image.FromFile(path + "\\3.jpg");
+                    break;
+                case 4:
+                    dice2img.Image = Image.FromFile(path + "\\4.jpg");
+                    break;
+                case 5:
+                    dice2img.Image = Image.FromFile(path + "\\5.jpg");
+                    break;
+                case 6:
+                    dice2img.Image = Image.FromFile(path + "\\6.jpg");
+                    break;
+            }
         }
         private void dice1img_Click(object sender, EventArgs e)
         {
@@ -223,7 +267,11 @@ namespace GiocoDado
             }
             else
             {
-                gara.Round();
+                val1 = gara.Roll();
+                val2 = gara.Roll();
+                gara.Round(val1, val2);
+                DiceFace1(val1);
+                DiceFace2(val2);
                 UpdateInterfaccia();
             }
         }
