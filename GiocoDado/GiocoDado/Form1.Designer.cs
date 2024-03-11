@@ -278,7 +278,7 @@
             this.resultsbox.Controls.Add(this.risround);
             this.resultsbox.Controls.Add(this.rispl2);
             this.resultsbox.Controls.Add(this.rispl1);
-            this.resultsbox.Location = new System.Drawing.Point(297, 402);
+            this.resultsbox.Location = new System.Drawing.Point(297, 408);
             this.resultsbox.Name = "resultsbox";
             this.resultsbox.Size = new System.Drawing.Size(438, 137);
             this.resultsbox.TabIndex = 28;
