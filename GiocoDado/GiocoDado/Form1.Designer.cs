@@ -264,9 +264,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::GiocoDado.Properties.Resources.game_sfondo;
-            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1015, 579);
+            this.pictureBox1.Size = new System.Drawing.Size(1008, 576);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -403,9 +403,8 @@
             this.player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player1.Location = new System.Drawing.Point(183, 151);
             this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(57, 20);
+            this.player1.Size = new System.Drawing.Size(0, 20);
             this.player1.TabIndex = 31;
-            this.player1.Text = "label9";
             this.player1.Visible = false;
             // 
             // player2
@@ -414,9 +413,8 @@
             this.player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player2.Location = new System.Drawing.Point(614, 151);
             this.player2.Name = "player2";
-            this.player2.Size = new System.Drawing.Size(67, 20);
+            this.player2.Size = new System.Drawing.Size(0, 20);
             this.player2.TabIndex = 32;
-            this.player2.Text = "label11";
             this.player2.Visible = false;
             // 
             // Form1
