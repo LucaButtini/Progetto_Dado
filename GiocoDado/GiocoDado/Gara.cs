@@ -59,34 +59,6 @@ namespace GiocoDado
             }
             GameWin();
         }
-        //public void Round(int val1, int val2)
-        //{
-
-        //    _g1.Dado.FacciaDado = Roll();
-        //    _g2.Dado.FacciaDado = Roll();
-
-        //    if (_g1.Dado > _g2.Dado)
-        //    {
-        //        _g1.NVittorie++;
-        //    }
-        //    else if (_g1.Dado < _g2.Dado)
-        //    {
-        //        _g2.NVittorie++;
-        //    }
-        //    else
-        //    {
-        //        _g1.NVittorie++;
-        //        _g2.NVittorie++;
-        //    }
-        //    NumeroRound++;
-
-        //    if (NumeroRound == RoundMax)
-        //    {
-        //        FineGara = true;
-
-        //    }
-        //    GameWin();
-        //}
         private void GameWin()
         {
             if (FineGara)

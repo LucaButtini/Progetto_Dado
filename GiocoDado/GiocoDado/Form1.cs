@@ -59,9 +59,8 @@ namespace GiocoDado
                 return;
 
             }
-            label7.Text = nome1;
             g1 = new Giocatore(nome1, new Dado());
-            nomi.Items.Add(g1.ToString());
+            lblpl1.Text = g1.Nome;
             textBox2.Clear();
         }
 
@@ -73,9 +72,9 @@ namespace GiocoDado
                 MessageBox.Show("Inserimento dati non valido o nullo", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            label8.Text = nome2;
+
             g2 = new Giocatore(nome2, new Dado());
-            nomi.Items.Add(g2.ToString());
+            lblpl2.Text = g2.Nome;
             textBox3.Clear();
         }
         private bool CheckInserimento(string str)
@@ -108,7 +107,7 @@ namespace GiocoDado
             if (CheckInserimentoInt(input))
             {
                 nRound = int.Parse(input);
-                nomi.Items.Add((int)nRound);
+                lblround.Text = $"N° ROUND: {nRound}";
             }
             else
             {
@@ -122,7 +121,7 @@ namespace GiocoDado
         {
             Random random = new Random();
 
-            for (int i = 0; i < 3; i++) //sono i giri che fa per l'animazione prima dell'estrazione della faccia
+            for (int i = 0; i < nRound; i++)
             {
                 int randomNumber = random.Next(1, 7);
 
@@ -153,7 +152,7 @@ namespace GiocoDado
                         dice2img.Image = Image.FromFile(path + "\\6.jpg");
                         break;
                 }
-                await Task.Delay(1000); // Ritardo di 1 secondo
+                await Task.Delay(500);
             }
             PlayGame();
         }
@@ -210,6 +209,26 @@ namespace GiocoDado
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetbtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Partita resettata", "Game", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            gara.ResetGame();
+            rispl1.Text = $"{g1.Nome}: {0} vittorie";
+            rispl2.Text = $"{g2.Nome}: {0} vittorie";
+            risround.Text = $"Round: {0}/{gara.RoundMax}";
+            risstato.Text = "Partita ancora da iniziare";
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -250,13 +269,15 @@ namespace GiocoDado
             label6.Visible = true;
             label7.Visible = true;
             label8.Visible = true;
-            label9.Visible = true;
-            label10.Visible = true;
-            label11.Visible = true;
-            label12.Visible = true;
+            rispl1.Visible = true;
+            rispl2.Visible = true;
+            risround.Visible = true;
+            risstato.Visible = true;
             dice1img.Visible = true;
             dice2img.Visible = true;
             rollbtn.Visible = true;
+            resultsbox.Visible = true;
+            resetbtn.Visible = true;
         }
         private void PlayGame()
         {
@@ -278,10 +299,10 @@ namespace GiocoDado
 
         private void UpdateInterfaccia()
         {
-            label9.Text = $"{g1.Nome}: {g1.NVittorie} vittorie";
-            label10.Text = $"{g2.Nome}: {g2.NVittorie} vittorie";
-            label11.Text = $"Round: {gara.NumeroRound}/{gara.RoundMax}";
-            label12.Text = gara.Winner;
+            rispl1.Text = $"{g1.Nome}: {g1.NVittorie} vittorie";
+            rispl2.Text = $"{g2.Nome}: {g2.NVittorie} vittorie";
+            risround.Text = $"Round: {gara.NumeroRound}/{gara.RoundMax}";
+            risstato.Text = gara.Winner;
         }
     }
 }

@@ -37,9 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.nomi = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -50,13 +48,23 @@
             this.rollbtn = new System.Windows.Forms.Button();
             this.dice1img = new System.Windows.Forms.PictureBox();
             this.dice2img = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.resultsbox = new System.Windows.Forms.GroupBox();
+            this.rispl1 = new System.Windows.Forms.Label();
+            this.rispl2 = new System.Windows.Forms.Label();
+            this.risround = new System.Windows.Forms.Label();
+            this.risstato = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblpl1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblpl2 = new System.Windows.Forms.Label();
+            this.lblround = new System.Windows.Forms.Label();
+            this.resetbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dice1img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice2img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.resultsbox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnclose
@@ -136,14 +144,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // nomi
-            // 
-            this.nomi.FormattingEnabled = true;
-            this.nomi.Location = new System.Drawing.Point(25, 468);
-            this.nomi.Name = "nomi";
-            this.nomi.Size = new System.Drawing.Size(139, 43);
-            this.nomi.TabIndex = 14;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -155,17 +155,6 @@
             this.label4.Text = "THE DICE GAME";
             this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::GiocoDado.Properties.Resources.game_sfondo;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1015, 579);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
             // 
             // label3
             // 
@@ -221,9 +210,8 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(222, 135);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 25);
+            this.label7.Size = new System.Drawing.Size(0, 25);
             this.label7.TabIndex = 23;
-            this.label7.Text = "label7";
             this.label7.Visible = false;
             // 
             // label8
@@ -232,9 +220,8 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(660, 135);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 25);
+            this.label8.Size = new System.Drawing.Size(0, 25);
             this.label8.TabIndex = 24;
-            this.label8.Text = "label8";
             this.label8.Visible = false;
             // 
             // rollbtn
@@ -253,9 +240,9 @@
             // 
             // dice1img
             // 
-            this.dice1img.Location = new System.Drawing.Point(208, 272);
+            this.dice1img.Location = new System.Drawing.Point(187, 187);
             this.dice1img.Name = "dice1img";
-            this.dice1img.Size = new System.Drawing.Size(109, 83);
+            this.dice1img.Size = new System.Drawing.Size(180, 180);
             this.dice1img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dice1img.TabIndex = 26;
             this.dice1img.TabStop = false;
@@ -264,53 +251,148 @@
             // 
             // dice2img
             // 
-            this.dice2img.Location = new System.Drawing.Point(612, 272);
+            this.dice2img.Location = new System.Drawing.Point(618, 187);
             this.dice2img.Name = "dice2img";
-            this.dice2img.Size = new System.Drawing.Size(107, 83);
+            this.dice2img.Size = new System.Drawing.Size(180, 180);
             this.dice2img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dice2img.TabIndex = 27;
             this.dice2img.TabStop = false;
             this.dice2img.Visible = false;
             // 
-            // label9
+            // pictureBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(227, 414);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "label9";
-            this.label9.Visible = false;
+            this.pictureBox1.BackgroundImage = global::GiocoDado.Properties.Resources.game_sfondo;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1015, 579);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // resultsbox
+            // 
+            this.resultsbox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.resultsbox.Controls.Add(this.risstato);
+            this.resultsbox.Controls.Add(this.risround);
+            this.resultsbox.Controls.Add(this.rispl2);
+            this.resultsbox.Controls.Add(this.rispl1);
+            this.resultsbox.Location = new System.Drawing.Point(297, 402);
+            this.resultsbox.Name = "resultsbox";
+            this.resultsbox.Size = new System.Drawing.Size(438, 137);
+            this.resultsbox.TabIndex = 28;
+            this.resultsbox.TabStop = false;
+            this.resultsbox.Text = "Risultati";
+            this.resultsbox.Visible = false;
+            // 
+            // rispl1
+            // 
+            this.rispl1.AutoSize = true;
+            this.rispl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rispl1.Location = new System.Drawing.Point(7, 18);
+            this.rispl1.Name = "rispl1";
+            this.rispl1.Size = new System.Drawing.Size(0, 20);
+            this.rispl1.TabIndex = 0;
+            this.rispl1.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // rispl2
+            // 
+            this.rispl2.AutoSize = true;
+            this.rispl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rispl2.Location = new System.Drawing.Point(7, 47);
+            this.rispl2.Name = "rispl2";
+            this.rispl2.Size = new System.Drawing.Size(0, 20);
+            this.rispl2.TabIndex = 1;
+            this.rispl2.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // risround
+            // 
+            this.risround.AutoSize = true;
+            this.risround.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.risround.Location = new System.Drawing.Point(6, 78);
+            this.risround.Name = "risround";
+            this.risround.Size = new System.Drawing.Size(0, 20);
+            this.risround.TabIndex = 2;
+            // 
+            // risstato
+            // 
+            this.risstato.AutoSize = true;
+            this.risstato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.risstato.Location = new System.Drawing.Point(6, 108);
+            this.risstato.Name = "risstato";
+            this.risstato.Size = new System.Drawing.Size(209, 20);
+            this.risstato.TabIndex = 3;
+            this.risstato.Text = "Partita ancora da iniziare";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblround);
+            this.groupBox1.Controls.Add(this.lblpl2);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lblpl1);
+            this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Location = new System.Drawing.Point(12, 414);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(279, 131);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Gara";
+            // 
+            // lblpl1
+            // 
+            this.lblpl1.AutoSize = true;
+            this.lblpl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpl1.ForeColor = System.Drawing.Color.White;
+            this.lblpl1.Location = new System.Drawing.Point(19, 36);
+            this.lblpl1.Name = "lblpl1";
+            this.lblpl1.Size = new System.Drawing.Size(0, 20);
+            this.lblpl1.TabIndex = 0;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(227, 451);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(102, 36);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "label10";
-            this.label10.Visible = false;
+            this.label10.Size = new System.Drawing.Size(42, 25);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "VS";
             // 
-            // label11
+            // lblpl2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(227, 483);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "label11";
-            this.label11.Visible = false;
+            this.lblpl2.AutoSize = true;
+            this.lblpl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpl2.ForeColor = System.Drawing.Color.White;
+            this.lblpl2.Location = new System.Drawing.Point(185, 36);
+            this.lblpl2.Name = "lblpl2";
+            this.lblpl2.Size = new System.Drawing.Size(0, 20);
+            this.lblpl2.TabIndex = 2;
             // 
-            // label12
+            // lblround
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(224, 520);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "label12";
-            this.label12.Visible = false;
+            this.lblround.AutoSize = true;
+            this.lblround.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblround.ForeColor = System.Drawing.Color.Black;
+            this.lblround.Location = new System.Drawing.Point(92, 90);
+            this.lblround.Name = "lblround";
+            this.lblround.Size = new System.Drawing.Size(0, 20);
+            this.lblround.TabIndex = 3;
+            // 
+            // resetbtn
+            // 
+            this.resetbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.resetbtn.Image = global::GiocoDado.Properties.Resources.nero;
+            this.resetbtn.Location = new System.Drawing.Point(873, 445);
+            this.resetbtn.Name = "resetbtn";
+            this.resetbtn.Size = new System.Drawing.Size(112, 61);
+            this.resetbtn.TabIndex = 30;
+            this.resetbtn.Text = "Reset \r\nPartita";
+            this.resetbtn.UseVisualStyleBackColor = true;
+            this.resetbtn.Visible = false;
+            this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
             // 
             // Form1
             // 
@@ -319,10 +401,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1007, 578);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.resetbtn);
+            this.Controls.Add(this.resultsbox);
             this.Controls.Add(this.dice2img);
             this.Controls.Add(this.dice1img);
             this.Controls.Add(this.rollbtn);
@@ -333,7 +413,6 @@
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.nomi);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -344,14 +423,20 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "The Dice Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice1img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice2img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.resultsbox.ResumeLayout(false);
+            this.resultsbox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,9 +452,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox nomi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
@@ -380,10 +463,18 @@
         private System.Windows.Forms.Button rollbtn;
         private System.Windows.Forms.PictureBox dice1img;
         private System.Windows.Forms.PictureBox dice2img;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox resultsbox;
+        private System.Windows.Forms.Label risstato;
+        private System.Windows.Forms.Label risround;
+        private System.Windows.Forms.Label rispl2;
+        private System.Windows.Forms.Label rispl1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblround;
+        private System.Windows.Forms.Label lblpl2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblpl1;
+        private System.Windows.Forms.Button resetbtn;
     }
 }
 
