@@ -93,6 +93,16 @@ namespace GiocoDado.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap game_sfondo9 {
+            get {
+                object obj = ResourceManager.GetObject("game_sfondo9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nero {
             get {
                 object obj = ResourceManager.GetObject("nero", resourceCulture);

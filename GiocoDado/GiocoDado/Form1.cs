@@ -108,7 +108,7 @@ namespace GiocoDado
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //inserimento del numero di round
+            //estrae e visualizza il numero di round dalla casella di testo corrispondente.
             string input = textBox1.Text;
 
             if (CheckInserimentoInt(input))
@@ -127,6 +127,7 @@ namespace GiocoDado
         private async void rollbtn_Click(object sender, EventArgs e)
         {
             //metodo per creare l'animazione dei dadi che girano prima dell'estrazione del numero 
+            //Mostra un'animazione dei dadi che girano prima dell'estrazione del numero
             dice1img.Visible = true;
             dice2img.Visible = true;
             Random random = new Random();
@@ -280,7 +281,8 @@ namespace GiocoDado
 
         private void AttivaCampoGioco()
         {
-            //metodo per rendere visibili tutti gli elementi del campo di gioco che sono all'inizio nascosti
+            // Mostra tutti gli elementi del campo di gioco che erano nascosti all'inizio
+
             pictureBox1.Visible = true;
             label4.Visible = true;
             label6.Visible = true;
