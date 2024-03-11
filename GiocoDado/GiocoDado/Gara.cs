@@ -35,6 +35,12 @@ namespace GiocoDado
         }
         public void Round(int val1, int val2)
         {
+            NumeroRound++;
+            if (NumeroRound == RoundMax)
+            {
+                FineGara = true;
+
+            }
             _g1.Dado.FacciaDado = val1;
             _g2.Dado.FacciaDado = val2;
             if (_g1.Dado > _g2.Dado)
@@ -49,13 +55,6 @@ namespace GiocoDado
             {
                 _g1.NVittorie++;
                 _g2.NVittorie++;
-            }
-            NumeroRound++;
-
-            if (NumeroRound == RoundMax)
-            {
-                FineGara = true;
-
             }
             GameWin();
         }
@@ -86,6 +85,9 @@ namespace GiocoDado
             _g1.NVittorie = 0;
             _g2.NVittorie = 0;
             numeroRound = 0;
+            FineGara = false; 
+            Winner = null;   
         }
+
     }
 }

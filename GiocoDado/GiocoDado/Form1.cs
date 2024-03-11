@@ -119,6 +119,9 @@ namespace GiocoDado
 
         private async void rollbtn_Click(object sender, EventArgs e)
         {
+            dice1img.Visible = true;
+            dice2img.Visible = true;
+
             Random random = new Random();
 
             for (int i = 0; i < nRound; i++)
@@ -273,8 +276,6 @@ namespace GiocoDado
             rispl2.Visible = true;
             risround.Visible = true;
             risstato.Visible = true;
-            dice1img.Visible = true;
-            dice2img.Visible = true;
             rollbtn.Visible = true;
             resultsbox.Visible = true;
             resetbtn.Visible = true;
@@ -284,7 +285,7 @@ namespace GiocoDado
 
             if (gara.FineGara)
             {
-                MessageBox.Show("gara finita", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("La gara è finita, esci o resetta la partita", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {

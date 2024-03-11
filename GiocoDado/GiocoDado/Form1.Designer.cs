@@ -50,15 +50,15 @@
             this.dice2img = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.resultsbox = new System.Windows.Forms.GroupBox();
-            this.rispl1 = new System.Windows.Forms.Label();
-            this.rispl2 = new System.Windows.Forms.Label();
-            this.risround = new System.Windows.Forms.Label();
             this.risstato = new System.Windows.Forms.Label();
+            this.risround = new System.Windows.Forms.Label();
+            this.rispl2 = new System.Windows.Forms.Label();
+            this.rispl1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblpl1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblpl2 = new System.Windows.Forms.Label();
             this.lblround = new System.Windows.Forms.Label();
+            this.lblpl2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblpl1 = new System.Windows.Forms.Label();
             this.resetbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dice1img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice2img)).BeginInit();
@@ -273,6 +273,7 @@
             // resultsbox
             // 
             this.resultsbox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.resultsbox.BackgroundImage = global::GiocoDado.Properties.Resources.paper;
             this.resultsbox.Controls.Add(this.risstato);
             this.resultsbox.Controls.Add(this.risround);
             this.resultsbox.Controls.Add(this.rispl2);
@@ -285,15 +286,24 @@
             this.resultsbox.Text = "Risultati";
             this.resultsbox.Visible = false;
             // 
-            // rispl1
+            // risstato
             // 
-            this.rispl1.AutoSize = true;
-            this.rispl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rispl1.Location = new System.Drawing.Point(7, 18);
-            this.rispl1.Name = "rispl1";
-            this.rispl1.Size = new System.Drawing.Size(0, 20);
-            this.rispl1.TabIndex = 0;
-            this.rispl1.Click += new System.EventHandler(this.label9_Click);
+            this.risstato.AutoSize = true;
+            this.risstato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.risstato.Location = new System.Drawing.Point(6, 108);
+            this.risstato.Name = "risstato";
+            this.risstato.Size = new System.Drawing.Size(209, 20);
+            this.risstato.TabIndex = 3;
+            this.risstato.Text = "Partita ancora da iniziare";
+            // 
+            // risround
+            // 
+            this.risround.AutoSize = true;
+            this.risround.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.risround.Location = new System.Drawing.Point(6, 78);
+            this.risround.Name = "risround";
+            this.risround.Size = new System.Drawing.Size(0, 20);
+            this.risround.TabIndex = 2;
             // 
             // rispl2
             // 
@@ -305,24 +315,15 @@
             this.rispl2.TabIndex = 1;
             this.rispl2.Click += new System.EventHandler(this.label10_Click);
             // 
-            // risround
+            // rispl1
             // 
-            this.risround.AutoSize = true;
-            this.risround.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.risround.Location = new System.Drawing.Point(6, 78);
-            this.risround.Name = "risround";
-            this.risround.Size = new System.Drawing.Size(0, 20);
-            this.risround.TabIndex = 2;
-            // 
-            // risstato
-            // 
-            this.risstato.AutoSize = true;
-            this.risstato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.risstato.Location = new System.Drawing.Point(6, 108);
-            this.risstato.Name = "risstato";
-            this.risstato.Size = new System.Drawing.Size(209, 20);
-            this.risstato.TabIndex = 3;
-            this.risstato.Text = "Partita ancora da iniziare";
+            this.rispl1.AutoSize = true;
+            this.rispl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rispl1.Location = new System.Drawing.Point(7, 18);
+            this.rispl1.Name = "rispl1";
+            this.rispl1.Size = new System.Drawing.Size(0, 20);
+            this.rispl1.TabIndex = 0;
+            this.rispl1.Click += new System.EventHandler(this.label9_Click);
             // 
             // groupBox1
             // 
@@ -339,15 +340,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gara";
             // 
-            // lblpl1
+            // lblround
             // 
-            this.lblpl1.AutoSize = true;
-            this.lblpl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpl1.ForeColor = System.Drawing.Color.White;
-            this.lblpl1.Location = new System.Drawing.Point(19, 36);
-            this.lblpl1.Name = "lblpl1";
-            this.lblpl1.Size = new System.Drawing.Size(0, 20);
-            this.lblpl1.TabIndex = 0;
+            this.lblround.AutoSize = true;
+            this.lblround.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblround.ForeColor = System.Drawing.Color.Black;
+            this.lblround.Location = new System.Drawing.Point(92, 90);
+            this.lblround.Name = "lblround";
+            this.lblround.Size = new System.Drawing.Size(0, 20);
+            this.lblround.TabIndex = 3;
+            // 
+            // lblpl2
+            // 
+            this.lblpl2.AutoSize = true;
+            this.lblpl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpl2.ForeColor = System.Drawing.Color.White;
+            this.lblpl2.Location = new System.Drawing.Point(185, 36);
+            this.lblpl2.Name = "lblpl2";
+            this.lblpl2.Size = new System.Drawing.Size(0, 20);
+            this.lblpl2.TabIndex = 2;
             // 
             // label10
             // 
@@ -360,25 +371,15 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "VS";
             // 
-            // lblpl2
+            // lblpl1
             // 
-            this.lblpl2.AutoSize = true;
-            this.lblpl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpl2.ForeColor = System.Drawing.Color.White;
-            this.lblpl2.Location = new System.Drawing.Point(185, 36);
-            this.lblpl2.Name = "lblpl2";
-            this.lblpl2.Size = new System.Drawing.Size(0, 20);
-            this.lblpl2.TabIndex = 2;
-            // 
-            // lblround
-            // 
-            this.lblround.AutoSize = true;
-            this.lblround.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblround.ForeColor = System.Drawing.Color.Black;
-            this.lblround.Location = new System.Drawing.Point(92, 90);
-            this.lblround.Name = "lblround";
-            this.lblround.Size = new System.Drawing.Size(0, 20);
-            this.lblround.TabIndex = 3;
+            this.lblpl1.AutoSize = true;
+            this.lblpl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpl1.ForeColor = System.Drawing.Color.White;
+            this.lblpl1.Location = new System.Drawing.Point(19, 36);
+            this.lblpl1.Name = "lblpl1";
+            this.lblpl1.Size = new System.Drawing.Size(0, 20);
+            this.lblpl1.TabIndex = 0;
             // 
             // resetbtn
             // 
