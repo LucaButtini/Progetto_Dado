@@ -16,6 +16,7 @@ namespace GiocoDado
         {
             _facciaDado = 0;
         }
+        //operatori per il confronto delle facce dei dadi
         static public bool operator >(Dado dado1, Dado dado2)
         {
             return (dado1.FacciaDado > dado2.FacciaDado);

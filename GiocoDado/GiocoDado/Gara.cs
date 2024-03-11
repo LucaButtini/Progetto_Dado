@@ -11,7 +11,7 @@ namespace GiocoDado
         Random rnd = new Random(DateTime.Now.Millisecond);
         Giocatore _g1, _g2;
         int numeroRound, _roundMax, _faccieEstrazioneDado;
-        bool _fineGara, _pari;
+        bool _fineGara;
         string _winner;
         public Gara(Giocatore g1, Giocatore g2, int roundMax, int faccieEstrazioneDado)
         {
@@ -20,21 +20,22 @@ namespace GiocoDado
             numeroRound = 0;
             RoundMax = roundMax;
             FineGara = false;
-            Pari = false;
             FaccieEstrazioneDado = faccieEstrazioneDado;
         }
         public bool FineGara { get => _fineGara; private set => _fineGara = value; }
         public int NumeroRound { get => numeroRound; private set => numeroRound = value; }
         public int RoundMax { get => _roundMax; set => _roundMax = value; }
-        public bool Pari { get => _pari; private set => _pari = value; }
         public string Winner { get => _winner; private set => _winner = value; }
         public int FaccieEstrazioneDado { get => _faccieEstrazioneDado; set => _faccieEstrazioneDado = value; }
         public int Roll()
         {
+            //metodo che estrae una faccia casuale del dado
             return rnd.Next(1, FaccieEstrazioneDado + 1);
         }
         public void Round(int val1, int val2)
         {
+            //esegue un round della partita
+            //i valori della facce del dado sono confrontati con gli operatori
             NumeroRound++;
             if (NumeroRound == RoundMax)
             {
@@ -60,6 +61,7 @@ namespace GiocoDado
         }
         private void GameWin()
         {
+            //metodo che assegna alla proprietà Winner il valore corretto in base alle vittorie dei giocatori o se la partità è ancora in corso
             if (FineGara)
             {
                 if (_g1.NVittorie > _g2.NVittorie)
@@ -82,11 +84,12 @@ namespace GiocoDado
         }
         public void ResetGame()
         {
+            //resetto la partita in corso
             _g1.NVittorie = 0;
             _g2.NVittorie = 0;
             numeroRound = 0;
-            FineGara = false; 
-            Winner = null;   
+            FineGara = false;
+            Winner = null;
         }
 
     }

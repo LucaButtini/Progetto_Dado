@@ -24,9 +24,5 @@ namespace GiocoDado
         public Dado Dado { get { return _dado; } set { _dado = value; } }
         public string Nome { get => _nome; set => _nome = value; }
         public int NVittorie { get => _nVittorie; set => _nVittorie = value; }
-        public override string ToString()
-        {
-            return string.Format($"Player : {Nome}");
-        }
     }
 }

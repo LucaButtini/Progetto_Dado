@@ -16,7 +16,7 @@ namespace GiocoDado
         Giocatore g1, g2;
         int faccieDado = 6, nRound = 0, val1, val2;
         string nome1, nome2;
-        string path = Environment.CurrentDirectory + "\\images_bin";
+        string path = Environment.CurrentDirectory + "\\images_bin"; //path per le immagini del form
         public Form1()
         {
             InitializeComponent();
@@ -29,11 +29,12 @@ namespace GiocoDado
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            Close();
+            Close(); //chiusura form
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //evento di chiusura del form per far decidere all'utente se uscire dal form 
             if (MessageBox.Show("Vuoi uscire dal gioco?", "Attenzione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
@@ -52,6 +53,7 @@ namespace GiocoDado
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //creazione giocatore 1
             nome1 = textBox2.Text;
             if (!CheckInserimento(nome1))
             {
@@ -66,6 +68,7 @@ namespace GiocoDado
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //creazione giocatore 2
             nome2 = textBox3.Text;
             if (!CheckInserimento(nome2))
             {
@@ -79,6 +82,7 @@ namespace GiocoDado
         }
         private bool CheckInserimento(string str)
         {
+            //metodo utilizzato per il controllo dell'inserimento di stringhe
             if (String.IsNullOrEmpty(str))
             {
                 return false;
@@ -102,6 +106,7 @@ namespace GiocoDado
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //inserimento del numero di round
             string input = textBox1.Text;
 
             if (CheckInserimentoInt(input))
@@ -119,9 +124,9 @@ namespace GiocoDado
 
         private async void rollbtn_Click(object sender, EventArgs e)
         {
+            //metodo per creare l'animazione dei dadi che girano prima dell'estrazione del numero 
             dice1img.Visible = true;
             dice2img.Visible = true;
-
             Random random = new Random();
 
             for (int i = 0; i < nRound; i++)
@@ -161,6 +166,7 @@ namespace GiocoDado
         }
         private void DiceFace1(int val)
         {
+            //metodo visualizzazione faccia estratta del dado di giocatore 1
             switch (val)
             {
                 case 1:
@@ -185,6 +191,7 @@ namespace GiocoDado
         }
         private void DiceFace2(int val)
         {
+            //metodo visualizzazione faccia estratta del dado di giocatore 1
             switch (val)
             {
                 case 1:
@@ -224,6 +231,7 @@ namespace GiocoDado
 
         private void resetbtn_Click(object sender, EventArgs e)
         {
+            //reset della gara premendo il pulsante reset
             MessageBox.Show("Partita resettata", "Game", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             gara.ResetGame();
             rispl1.Text = $"{g1.Nome}: {0} vittorie";
@@ -241,12 +249,15 @@ namespace GiocoDado
         {
             if (g1 == null || g2 == null || nRound == 0)
             {
+                //controllo inserimento corretto dei dati durante la creazione della gara.
+                //Tutti i dati devono essere stati inseriti per istanziare la gara
                 MessageBox.Show("Inserimento dati non valido o nullo", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (gara == null)
             {
+                //controllo della corretta creazione della classe gara
                 try
                 {
                     gara = new Gara(g1, g2, nRound, faccieDado);
@@ -267,6 +278,7 @@ namespace GiocoDado
 
         private void AttivaCampoGioco()
         {
+            //metodo per rendere visibili tutti gli elementi del campo di gioco che sono all'inizio nascosti
             pictureBox1.Visible = true;
             label4.Visible = true;
             label6.Visible = true;
@@ -282,7 +294,9 @@ namespace GiocoDado
         }
         private void PlayGame()
         {
-
+            //metodo che da avvio al gioco.
+            //Vengono estratte le facce del dado e passate ai metodi per la visualizzazione della faccia estratta.
+            //si esegue un round
             if (gara.FineGara)
             {
                 MessageBox.Show("La gara è finita, esci o resetta la partita", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -294,12 +308,13 @@ namespace GiocoDado
                 gara.Round(val1, val2);
                 DiceFace1(val1);
                 DiceFace2(val2);
-                UpdateInterfaccia();
+                UpdateStatus();
             }
         }
 
-        private void UpdateInterfaccia()
+        private void UpdateStatus()
         {
+            //aggiorna gli stati di vittorie, round e lo stato della partita
             rispl1.Text = $"{g1.Nome}: {g1.NVittorie} vittorie";
             rispl2.Text = $"{g2.Nome}: {g2.NVittorie} vittorie";
             risround.Text = $"Round: {gara.NumeroRound}/{gara.RoundMax}";
