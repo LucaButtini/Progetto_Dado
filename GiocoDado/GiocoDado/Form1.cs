@@ -63,6 +63,7 @@ namespace GiocoDado
             }
             g1 = new Giocatore(nome1, new Dado());
             lblpl1.Text = g1.Nome;
+            player1.Text = g1.Nome;
             textBox2.Clear();
         }
 
@@ -78,6 +79,7 @@ namespace GiocoDado
 
             g2 = new Giocatore(nome2, new Dado());
             lblpl2.Text = g2.Nome;
+            player2.Text = g2.Nome;
             textBox3.Clear();
         }
         private bool CheckInserimento(string str)
@@ -291,6 +293,8 @@ namespace GiocoDado
             rollbtn.Visible = true;
             resultsbox.Visible = true;
             resetbtn.Visible = true;
+            player1.Visible = true;
+            player2.Visible = true;
         }
         private void PlayGame()
         {

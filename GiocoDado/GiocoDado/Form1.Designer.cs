@@ -60,6 +60,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblpl1 = new System.Windows.Forms.Label();
             this.resetbtn = new System.Windows.Forms.Button();
+            this.player1 = new System.Windows.Forms.Label();
+            this.player2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dice1img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice2img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -262,7 +264,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::GiocoDado.Properties.Resources.game_sfondo;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1015, 579);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,6 +397,28 @@
             this.resetbtn.Visible = false;
             this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
             // 
+            // player1
+            // 
+            this.player1.AutoSize = true;
+            this.player1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player1.Location = new System.Drawing.Point(183, 151);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(57, 20);
+            this.player1.TabIndex = 31;
+            this.player1.Text = "label9";
+            this.player1.Visible = false;
+            // 
+            // player2
+            // 
+            this.player2.AutoSize = true;
+            this.player2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player2.Location = new System.Drawing.Point(614, 151);
+            this.player2.Name = "player2";
+            this.player2.Size = new System.Drawing.Size(67, 20);
+            this.player2.TabIndex = 32;
+            this.player2.Text = "label11";
+            this.player2.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +426,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1007, 578);
+            this.Controls.Add(this.player2);
+            this.Controls.Add(this.player1);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.resultsbox);
             this.Controls.Add(this.dice2img);
@@ -476,6 +502,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblpl1;
         private System.Windows.Forms.Button resetbtn;
+        private System.Windows.Forms.Label player1;
+        private System.Windows.Forms.Label player2;
     }
 }
 
