@@ -1,0 +1,30 @@
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe.config
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\bin\Debug\GiocoDado.pdb
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.AssemblyReference.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Form1.resources
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Properties.Resources.resources
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.GenerateResource.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.CoreCompileInputs.cache
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.exe
+C:\Users\Emilio\Desktop\Progetto_Dado\GiocoDado\GiocoDado\obj\Debug\GiocoDado.pdb
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe.config
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\bin\Debug\GiocoDado.pdb
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.AssemblyReference.cache
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Form1.resources
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Properties.Resources.resources
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.GenerateResource.cache
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.CoreCompileInputs.cache
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.exe
+F:\4E\Luca Buttini\GiocoDado\GiocoDado\obj\Debug\GiocoDado.pdb
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe.config
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\bin\Debug\GiocoDado.exe
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\bin\Debug\GiocoDado.pdb
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.AssemblyReference.cache
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Form1.resources
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.Properties.Resources.resources
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.GenerateResource.cache
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.csproj.CoreCompileInputs.cache
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.exe
+F:\4E\Luca Buttini\Dado_Rondina_Buttini\Code\GiocoDado\GiocoDado\obj\Debug\GiocoDado.pdb
